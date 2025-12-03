@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menjumlahkan Dua Bilangan</title>
+</head>
+
+<body>
+
+    <input type="number" id="angka1" onchange="hitung()">
+    <br><br>
+
+    <span> + </span>
+    <br><br>
+
+    <input type="number" id="angka2" onchange="hitung()">
+    <br><br>
+
+    <span> = </span>
+    <br><br>
+
+    <input type="number" id="hasil" readonly>
+
+    <script>
+        function hitung() {
+            let a = parseFloat(document.getElementById("angka1").value) || 0;
+            let b = parseFloat(document.getElementById("angka2").value) || 0;
+
+            let total = a + b;
+
+            document.getElementById("hasil").value = total;
+        }
+    </script>
+
+</body>
+
+</html>

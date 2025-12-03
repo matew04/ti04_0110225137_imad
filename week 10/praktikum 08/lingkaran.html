@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menghitung Luas dan Keliling Lingkaran</title>
+</head>
+<body>
+    <h2>Program Menghitung Luas dan Keliling Lingkaran</h2>
+
+    <label>Masukkan Jari-jari:</label>
+    <input type="number" id="r" placeholder="contoh: 10">
+    <button onclick="hitung()">Hitung</button>
+
+    <p id="luas"></p>
+    <p id="keliling"></p>
+
+    
+    <script>
+    const inputR = document.getElementById("r");
+
+        // Biar Enter langsung eksekusi
+    inputR.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                hitung();
+            }
+        });
+
+        function hitung() {
+            const PHI = 3.14;
+            let r = document.getElementById("r").value;
+
+            if (r <= 0) {
+                alert("Masukkan jari-jari yang benar!");
+                return;
+            }
+
+            let luas = PHI * r * r;
+            let keliling = 2 * PHI * r;
+
+            document.getElementById("luas").innerHTML = "Luas Lingkaran = " + luas.toFixed(2);
+            document.getElementById("keliling").innerHTML = "Keliling Lingkaran = " + keliling.toFixed(2);
+        }
+    </script>
+</body>
+</html>
