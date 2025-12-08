@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      fieldset {
+    width: 40%;
+    margin: 50px auto;
+    padding: 25px 30px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    font-family: "Segoe UI", sans-serif;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #fff;
+    transition: 0.25s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+    </style>
+</head>
+
+<body>
+   <fieldset>
+    <legend>mata uang asing - Kurs rupiah</legend>
+
+    <div class="form-group">
+        <label>Masukkan Nilai</label>
+        <input type="text" id="nilai">
+    </div>
+
+    <div class="form-group">
+        <label>Valas</label>
+        <select name="valas" id="valas">
+            <option value="usd">USD Dollar</option>
+            <option value="rm">Ringgit Malaysia</option>
+            <option value="ds">Dollar Singapure</option>
+            <option value="yj">Yen Jepang</option>
+            <option value="ra">Reyal</option>
+            <option value="eu">Euro</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Nilai Rupiah</label>
+        <input type="text" id="rupiah" readonly>
+    </div>
+</fieldset>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

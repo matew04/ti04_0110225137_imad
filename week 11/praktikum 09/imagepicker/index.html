@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Picker</title>
+    <style>
+        img {
+            width: 250px;
+            margin-top: 15px;
+        }
+
+        .alert-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            color: #fff;
+            padding: 15px 22px;
+            border-radius: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            font-size: 16px;
+            z-index: 9999;
+        }
+
+        .alert-box.show {
+            opacity: 1;
+        }
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: "Segoe UI", sans-serif;
+}
+
+h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Dropdown pilih gambar */
+#imageSelect {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: #fafafa;
+}
+
+#imageSelect:hover {
+    border-color: #999;
+}
+
+#imageSelect:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background: #fff;
+}
+
+/* Box tempat gambar */
+.preview-box {
+    margin-top: 20px;
+    padding: 18px;
+    border: 2px dashed #bbb;
+    border-radius: 10px;
+    text-align: center;
+    background: #f8f8f8;
+    transition: 0.3s ease;
+}
+
+.preview-box:hover {
+    border-color: #4a90e2;
+}
+
+#preview {
+    width: 260px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: none; /* awalnya ga keliatan */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+/* Saat ada gambar, fade in */
+#preview.show {
+    display: block;
+    opacity: 1;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Pilih Gambar:</h3>
+
+        <select id="imageSelect">
+            <option value="">-- Pilih Gambar --</option>
+            <option value="bison.jpg">Bison</option>
+            <option value="gorila.jpg">Gorila</option>
+            <option value="kucing.jpg">Kucing</option>
+            <option value="elang.jpg">Elang</option>
+            <option value="sapi.jpg">Sapi</option>
+            <option value="serigala.jpg">Serigala</option>
+        </select>
+
+        <div class="preview-box">
+            <img id="preview" src="" alt="">
+        </div>
+    </div>
+
+    <div id="customAlert" class="alert-box">Pesan alert</div>
+    <script src="pick.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Tiket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Form Validasi Tiket</h2>
+
+    <form id="ticketForm">
+
+        <div class="form-group">
+            <label>Nama Pelanggan</label>
+            <input type="text" id="nama">
+            <span class="error" id="err-nama"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" id="email">
+            <span class="error" id="err-email"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Jam Keberangkatan</label>
+            <input type="text" id="jam" placeholder="Format: HH:MM">
+            <span class="error" id="err-jam"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Tujuan Keberangkatan</label>
+            <input type="text" id="tujuan">
+            <span class="error" id="err-tujuan"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Jumlah Tiket</label>
+            <input type="number" id="tiket" min="1" max="10">
+            <span class="error" id="err-tiket"></span>
+        </div>
+
+        <button type="submit" class="btn">Kirim</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
