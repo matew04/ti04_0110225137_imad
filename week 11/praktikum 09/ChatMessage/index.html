@@ -14,39 +14,50 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 300px;
+            width: 250px;
             border: 2px solid black;
             border-radius: 8px;
             background: white;
             display: flex;
             flex-direction: column;
         }
-
+        
         .messages {
             height: 250px;
             padding: 10px;
             overflow-y: auto;
-            border-bottom: 2px solid black;
 
         }
 
         .input-area {
             display: flex;
         }
-
+        
         #msgText {
             flex: 1;
-            padding: 8px;
+            padding: 6px 10px;
+            border-radius: 15px;
             border: none;
         }
 
+        p{
+            background: #dcf8c6;
+            padding: 3px 12px;
+            border-radius: 15px;
+            margin: 5px 0;
+            margin-left: 30px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        
         #sendBtn {
             padding: 10px;
+            margin: 1px;
             background: dodgerblue;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 3px;
+            border-radius: 6px;
         }
     </style>
 </head>
@@ -62,7 +73,6 @@
         </div>
     </div>
 
-    <!-- file JS dipanggil DI BAWAH -->
     <script src="chat.js"></script>
 </body>
 
