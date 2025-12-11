@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Peserta</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/9391714.png" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="registrasi.html">Registrasi Seminar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="peserta.html">Registrasi Peserta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data.html">Data Peserta</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Navbar -->
+    <!-- Form -->
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Form Registrasi Peserta
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label" for="name">Nama Lengkap</label>
+                    <div class="col-8">
+                        <input id="name" name="name" placeholder="Isikan Nama Lengkap" type="text" class="form-control"
+                            required="required">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="tmp_lahir" class="col-4 col-form-label">Tempat Lahir</label>
+                    <div class="col-8">
+                        <input id="tmp_lahir" name="tmp_lahir" placeholder="Isikan Kota/Kab" type="text "
+                            class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="tgl_lahir" class="col-4 col-form-label">Tanggal Lahir</label>
+                    <div class="col-8">
+                        <input id="tgl_lahir" name="tgl_lahir" type="date" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4">Gender</label>
+                    <div class="col-8">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input name="gender" id="gender_0" type="radio" class="custom-control-input" value="laki">
+                            <label for="gender_0" class="custom-control-label">Laki-Laki</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input name="gender" id="gender_1" type="radio" class="custom-control-input"
+                                value="perempuan">
+                            <label for="gender_1" class="custom-control-label">Perempuan</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-4 col-form-label">Email</label>
+                    <div class="col-8">
+                        <input id="email" name="email" placeholder="Isikan Email Utama" type="text" class="form-control"
+                            required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="status" class="col-4 col-form-label">Status Peserta</label>
+                    <div class="col-8">
+                        <select id="status" name="status" class="custom-select" required="required">
+                            <option value="mahasiswa">Mahasiswa</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="karyawan">Karyawan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-4 col-8">
+                        <button name="submit" type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!-- Close Form -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
